@@ -1,0 +1,40 @@
+.identifier{
+    float: right;
+    margin-top: 10px;
+  }
+
+  .sidebar {
+    width: 220px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  .sidebar li a {
+
+  text-decoration: none;
+  color: black;
+  }
+
+  .sidebar li a:hover {
+
+    background-color: rgb(9, 142, 214);
+    padding: 7px;
+    border-radius: 10px;
+    transition: 0.2s;
+    }
+
+
+.Search{
+    padding: 1px;
+    margin-bottom: 2px;
+}

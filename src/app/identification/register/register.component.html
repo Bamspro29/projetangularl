@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+     body {
+      background-color: black;
+      width: 100%;
+      padding-bottom: 4rem;
+    }
+    .card {
+      background-color: white;
+      position: absolute;
+      width: 100%;
+      max-width: 900px;
+      padding: 8rem;
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+      
+      
+      margin-top:20% ;
+      margin-bottom: 2%;
+      justify-content: center;
+    }
+    .return-arrow {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: black;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+    .header {
+      text-align: center;
+    }
+    .header img {
+      width: 8%; /* Logo size */
+    }
+    .header h1 {
+      font-size: 2.5rem;
+    }
+    .header p {
+      font-size: 1rem;
+      font-weight: bold;
+      
+    }
+    .btn img {
+      margin-left: 5px;
+      width: 10%; /* Icon size */
+    }
+    .btn-primary, .btn-dark,.btn-info {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      padding: 0.5rem; /* Diminuer le padding des boutons */
+      font-size: 1rem; /* Diminuer la taille du texte des boutons */
+      text-align: center;
+    }
+    
+    .separator {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin: 1rem 0;
+    }
+    .separator hr {
+      flex: 1;
+      margin: 0 10px;
+    }
+    
+    .text-center a {
+      font-size: 1rem;
+    }
+    .mll {
+      color: white;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="container-fluid vh-100 d-flex justify-content-center align-items-center">
+    <div class="row w-100">
+      <div class="col-md-6 d-flex justify-content-center align-items-center">
+        <div class="card">
+          <div class="header">
+            <div class="return-arrow" onclick="window.history.back();">&larr;</div>
+            <h1>
+              <img src="assets/logo.PNG" alt="forms.app">
+              forms.app
+            </h1>
+            <p>Creer votre compte gratuitement !</p>
+          </div>
+          <div class="social d-grid gap-2">
+            <button class="btn btn-primary w-100 mb-2" type="button">
+              <img src="assets/Googelic.PNG" alt="GOOGLE">
+              <span class="mx-auto">S'IDENTIFIER AVEC GOOGLE</span>
+            </button>
+          
+            <button class="btn btn-dark w-100" type="button">
+              <img src="assets/appleic.PNG" alt="APPLE">
+              <span class="mx-auto">S'IDENTIFIER AVEC APPLE</span>
+            </button>
+            <div class="separator mt-3 mb-3">
+              <hr>
+              <span>ou</span>
+              <hr>
+            </div>
+            <button class="btn btn-info w-100" type="button">
+              <img src="assets/Emeil.PNG" alt="EMAIL">
+              <span class="mx-auto"><a href="/formulaire" class="mll">S'IDENTIFIER AVEC EMAIL</a></span>
+            </button>
+            
+          </div>
+          <div class="text-center mt-3">
+            <a routerLink="/login">Already have an account? Sign in</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 d-none d-md-block">
+        <app-carousel></app-carousel>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

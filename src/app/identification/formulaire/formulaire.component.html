@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: black;
+    }
+    .card {
+      background-color: white;
+      position: absolute;
+      width: 100%;
+      max-width: 900px;
+      padding: 2rem;
+      margin-top: 40%;
+      margin-bottom: 10%;
+      justify-content: center;
+    }
+    .return-arrow {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: black;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+    .header {
+      text-align: center;
+    }
+    .header img {
+      width: 10%; /* Logo size */
+    }
+    .header h1 {
+      font-size: 2.5rem;
+    }
+    .header p {
+      font-size: 1rem;
+      font-weight: bold;
+      
+    }
+  
+    label {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .form-control {
+      font-size: 1rem;
+      padding: 1rem; /* Input padding */
+      margin-top: 1rem; /* Margin for inputs */
+    }
+    .password-container {
+      position: relative;
+    }
+    .toggle-password {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .text-end {
+      font-size: 1rem;
+    }
+    
+    .text-center a {
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid vh-100 d-flex justify-content-center align-items-center " >
+    <div class="row w-100">
+      <div class="col-md-6 d-flex justify-content-center align-items-center ">
+        <div class="card ">
+          <div class="header">
+            <div class="return-arrow" onclick="window.history.back();">&larr;</div>
+            <h1>
+              <img src="assets/logo.PNG" alt="Logo">
+              forms.app
+            </h1>
+            <p>Welcome back! <img src="assets/hi.PNG" alt="hi" style="width: 5%;"></p>
+          </div>
+         
+          <form (ngSubmit)="onSubmit()">
+            <div class="form-group mb-3">
+              <label for="fullname">Nom complet</label>
+              <input type="fullname" id="fullname" name="fullname" placeholder="Veuillez saisir votre non et prenom" class="form-control" [(ngModel)]="email" required>
+            </div>
+            <div class="form-group mb-3">
+              <label for="email"> Email</label>
+              <input type="email" id="email" name="email" placeholder="exemple@domine.com" class="form-control" [(ngModel)]="email" required>
+            </div>
+            <div class="form-group mb-3">
+              <label for="username">Nom d'utilisateur </label>
+              <input type="username" id="username" name="username" placeholder="Veuillez saisir votre nom d'utilisateur" class="form-control" [(ngModel)]="email" required>
+            </div>
+            <div class="form-group mb-3 password-container">
+              <label for="password">Mot de passe</label>
+              <input type="password" id="password" name="password" placeholder="Veuillez saisir votre mot de passe" class="form-control" [(ngModel)]="password" required>
+              <!-- <span class="toggle-password" onclick="togglePassword()">👁️</span> -->
+            </div>
+            <div class="mt-2 mb-3 text-end">
+              <a href="/forgetlogin" id="forget" class="text-end">Vous avez oublié votre mot de passe?</a>
+            </div>
+            <div class="d-grid gap-2 mt-3">
+              <button type="submit" class="btn btn-info">S'INSCRIRE GRATUITEMENT</button>
+            </div>
+            <div class="text-center mt-3">
+              <p>Vous êtes nouveau? <a routerLink="/register">S'inscrire gratuitement</a></p>
+            </div>
+          </form>
+        </div>
+        </div>
+      <div class="col-md-6 d-none d-md-block">
+        <app-carousel></app-carousel>
+      </div> 
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- <script>
+    function togglePassword() {
+      var passwordInput = document.getElementById("password");
+      var passwordIcon = document.querySelector(".toggle-password");
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        passwordIcon.textContent = "🙈";
+      } else {
+        passwordInput.type = "password";
+        passwordIcon.textContent = "👁️";
+      }
+    }
+  </script> -->
+</body>
+</html>

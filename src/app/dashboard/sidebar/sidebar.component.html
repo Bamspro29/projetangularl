@@ -1,0 +1,67 @@
+<!-- sidebar.component.html -->
+<mat-sidenav-container class="example-container" autosize>
+  <mat-sidenav mode="side" opened>
+    <mat-nav-list>
+      <mat-list-item href="#" class="mes mt-2 mb-2">
+        <mat-icon>folder</mat-icon>
+        <a href="mesforms" class="lien mes">Mes Formulaires</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(0)
+      </mat-list-item>
+      <mat-list-item (click)="openNewFolderDialog()">
+        <mat-icon>create_new_folder</mat-icon>
+        Créer un nouveau dossier
+      </mat-list-item>
+      
+      <br>
+      <br>
+      
+      <div class="separator"></div>
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <span class="badge">Gratuit</span>
+            </mat-panel-title>
+            <mat-panel-description>
+              <!-- Vous pouvez ajouter du contenu ici -->
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div>
+            <p>Formulaire de quota</p>
+            <p>Quota de réponses mensuelles : 0 / 100</p>
+            <p>Quota de vue de formulaire : 0 / 1000</p>
+            <a href="#">Voir tout</a>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+      
+      <div class="separator"></div>
+        <mat-icon>archive</mat-icon>
+        <a href="/formarchive" class="lien">Archive</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(0)
+      <div class="separator"></div>
+      <mat-list-item href="#">
+        <mat-icon>delete</mat-icon>
+        <a href="formtrash" class="lien">Corbeille</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(0)
+      </mat-list-item>
+      
+      <div class="separator"></div>
+      <a href="" class="lien"></a>
+      <mat-list-item href="#">
+        <mat-icon>assignment_turned_in</mat-icon>
+        Mes soumissions
+      </mat-list-item>
+      <div class="separator"></div>
+      <mat-list-item href="#">
+        <mat-icon>group</mat-icon>
+        Membres d'équipe
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

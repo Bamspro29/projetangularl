@@ -1,0 +1,66 @@
+.create-button {
+  text-align: right;
+}
+
+
+.mes{
+  width:auto;
+  font-weight: bold;
+  font-size: medium;
+  
+}
+
+
+
+
+.example-container {
+  height: 90vh;
+  margin-left: 5px;
+}
+
+mat-icon {
+  margin-right: 3px;
+  
+ ;
+  
+
+}
+
+.separator {
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 10px 0;
+}
+
+
+
+
+.badge {
+  background-color: #333;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+mat-expansion-panel {
+  margin: 16px 0;
+}
+
+mat-expansion-panel-header {
+  background-color: white;
+}
+
+mat-expansion-panel-header .mat-content {
+  align-items: center;
+}
+
+mat-panel-title {
+  display: flex;
+  align-items: center;
+}
+
+.lien{
+  color: black;
+  margin-left: 10px;
+}
