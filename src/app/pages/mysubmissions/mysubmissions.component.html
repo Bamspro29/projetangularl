@@ -1,1 +1,166 @@
-<p>mysubmissions works!</p>
+<style>
+    
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+<div class="contenaire">
+
+    <div class="row md-12 container-fluid  border">
+        <app-navbar></app-navbar>
+
+    </div>
+
+
+    <div class="row md-12">
+        <div class="col-md-4">
+                         <app-sidebar></app-sidebar> 
+
+            
+          </div>
+
+          <div class="col-md-8 page ">
+            <div class="row md-12 mt-3 mb-3 ">
+                <div class="col-md-6"> <h5 class="mt-2">MES SOUMMISIONS</h5></div>
+                <div class="col-md-6">
+                    <div class="search-container">
+                        <mat-form-field class="search-field">
+                          <input matInput [(ngModel)]="searchQuery" placeholder="Chercher" class="search-input">
+                          <button mat-icon-button matSuffix (click)="onSearch()">
+                            <mat-icon>search</mat-icon>
+                          </button>
+                        </mat-form-field>
+                      </div>
+                      
+                </div>
+            </div>
+            <div class="row  md-12 li2">
+
+
+                <h6 class=" mt-2 ml-2">Brouillons</h6>
+                <h6 class="brll">Aucun projet n'est enregistré</h6>
+            </div>
+            <div class="row md-12 li3">
+                <h6 class=" mt-2 ml-2">Complété</h6>
+               
+            </div>
+            <div class="row md-12 li4">
+                <table>
+                    <thead>
+                        <tr >
+                            <th>Proprietaire du formulaire</th>
+                            <th>Titre du Formulaire</th>
+                            <th >Date de répo</th>
+                        </tr>
+                        
+                        
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <hr class="hhhh">
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="assets/logo.PNG" alt="lg" class="logo ml-2 mr-3">
+                                forms.app
+                            </td>
+                            <td>Onboarding Survey (FR)</td>
+                            <td> 18/07/2024
+                            </td>
+                            <td>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-square mss " viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                  </svg>
+                                  
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill yeux" viewBox="0 0 16 16">
+                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                                    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                                  </svg>
+
+                                  
+
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash delete" viewBox="0 0 16 16">
+                                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                                    <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                                  </svg>
+
+
+
+                            </td>
+                           
+                        </tr>
+                        <tr>
+                            <hr class="hhhh">
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="assets/logo.PNG" alt="lg" class="logo ml-2 mr-3">
+                                forms.app
+                            </td>
+                            <td>Onboarding Survey (FR)</td>
+                            <td> 18/07/2024
+                            </td>
+                            <td>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-square mss " viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                  </svg>
+                                  
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill yeux" viewBox="0 0 16 16">
+                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                                    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                                  </svg>
+
+                                  
+
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash delete" viewBox="0 0 16 16">
+                                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                                    <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                                  </svg>
+
+
+
+                            </td>
+                           
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+               
+            </div>
+            <div class="mm">
+                
+    
+                
+            </div>
+    
+
+          </div>
+
+
+    </div>
+
+
+
+
+
+
+</div>
+
+
+<!-- <div>
+    <img src="/frontend//public/assets/cards/ARC.PNG" alt="">
+</div> -->

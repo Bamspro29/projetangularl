@@ -1,0 +1,76 @@
+.page{
+    background-color:whitesmoke;
+   
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-field {
+    width: 250px; /* Vous pouvez ajuster cette valeur selon vos besoins */
+  }
+  
+  .search-input {
+    background-color: white;
+
+    width: 200px; /* Réduire la taille de l'input */
+  }
+
+.li2{
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 30px;
+    
+    border-radius: 20px;
+
+}
+.brll{
+    padding-top: 50px;
+    margin-bottom: 30px;
+    margin-left: 30%;
+    color: rgb(193, 192, 191);
+}
+.li3{
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 30px;
+    margin-top: 10px;
+    
+    border-radius: 10px;
+
+}
+.li4{
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 30px;
+    margin-top: 2px;
+    
+    border-radius: 10px;
+
+}
+
+.logo{
+    width: 50px;
+}
+
+.mss{
+
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.yeux{
+
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.delete{
+
+    margin-left: 20px;
+}
+
+.hhhh{
+    width: 100%;
+}
+  
