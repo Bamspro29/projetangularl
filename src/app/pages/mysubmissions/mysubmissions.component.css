@@ -1,0 +1,39 @@
+.hhhh{
+    width: 100%;
+}
+
+/* .separator {
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 10px 0;
+} */
+
+
+.horizontal-scroller-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .scroll-button {
+    padding: 10px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+
+  .horizontal-scroller {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    flex-grow: 1;
+  }
+
+  .scroll-item {
+    display: inline-block;
+    min-width: 200px;
+    margin-right: 10px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }

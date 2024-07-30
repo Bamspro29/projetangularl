@@ -42,28 +42,98 @@
 
     <div class="row md-12 container-fluid  border">
         <app-navbar></app-navbar>
-
     </div>
-
-
     <div class="row md-12">
         <div class="col-md-3">
                          <app-sidebar></app-sidebar> 
+        </div>
+        <div class="col-md-8 ">
+            <div class="main-container">
+                <h6 class="f">Mes formulaires</h6>
+                 <div class="button-container">
+                  <button  (click)="openDialog()" class="btn btn-info">CRÉER UN FORMULAIRE</button>
+                </div> 
 
-            
-          </div>
+                <div class="toolbar">
+                  <div class="search-wrapper" [class.searching]="isSearching">
+                    <button mat-icon-button matTooltip="Rechercher" (click)="toggleSearch()" *ngIf="!isSearching">
+                      <mat-icon class="bac">search</mat-icon>
+                    </button>
+                    <mat-form-field *ngIf="isSearching">
+                      <input matInput placeholder="Formulaire de rechercher" (blur)="toggleSearch()">
+                    </mat-form-field>
+                  </div>
 
-          <div class="col-md-8 ">
-            <div class="mm">
-                <div class="row md-12">
-                    <div class="col-md-6">
-                        <h5 class="mt-2">Mes formulaires</h5>
-                    </div>
-                    <div class="col-md-6">
-                        <button class="btn btn-info">CREER UN FORMULAIRE</button>
-                    </div>
+                  <div>
+                    <button mat-icon-button [matMenuTriggerFor]="filterMenu" matTooltip="Filtrer">
+                      <mat-icon class="bac">filter_list</mat-icon>
+                    </button>
+                  </div>
+                  <mat-menu #filterMenu="matMenu">
+                    <button mat-menu-item *ngFor="let filter of filters">
+                      <mat-checkbox></mat-checkbox>
+                      <mat-icon [ngStyle]="{'color': filter.color}">{{ filter.icon }}</mat-icon>
+                      <span>{{ filter.label }}</span>
+                    </button>
+                  </mat-menu>
+
+
+                  <div>
+                    <button mat-icon-button [matMenuTriggerFor]="filterMenu" matTooltip="liste">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sort-up-alt" viewBox="0 0 16 16">
+                            <path d="M3.5 13.5a.5.5 0 0 1-1 0V4.707L1.354 5.854a.5.5 0 1 1-.708-.708l2-1.999.007-.007a.5.5 0 0 1 .7.006l2 2a.5.5 0 1 1-.707.708L3.5 4.707zm4-9.5a.5.5 0 0 1 0-1h1a.5.5 0 0 1 0 1zm0 3a.5.5 0 0 1 0-1h3a.5.5 0 0 1 0 1zm0 3a.5.5 0 0 1 0-1h5a.5.5 0 0 1 0 1zM7 12.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7a.5.5 0 0 0-.5.5"/>
+                          </svg>
+                    </button>
+                  </div>
+                  <mat-menu #listeMenu="matMenu">
+                    <button mat-menu-item *ngFor="let liste of filters">
+
+                      <mat-checkbox></mat-checkbox>
+                      <mat-icon [ngStyle]="{'color': liste.color}">{{ liste.icon }}</mat-icon>
+                      <span>{{ liste.label }}</span>
+                    </button>
+                  </mat-menu>
+
+                  <button mat-icon-button matTooltip="Trier" (click)="toggleSortMenu()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-check bac" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0m0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0m0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0"/>
+                      </svg>
+                  </button>
+                  <div *ngIf="isSortMenuOpen" class="sort-menu">
+                    <button class="sort-menu-item">
+                      <mat-checkbox></mat-checkbox>
+                      <span>Tout sélectionner</span>
+                    </button>
+                    <button class="sort-menu-item">
+                      <mat-icon>arrow_back</mat-icon>
+                      <span>Déplacer vers</span>
+                    </button>
+                    <button class="sort-menu-item">
+                      <mat-icon>pause_circle_filled</mat-icon>
+                      <span>Désactiver</span>
+                    </button>
+                    <button class="sort-menu-item">
+                      <mat-icon>play_circle_filled</mat-icon>
+                      <span>Activer</span>
+                    </button>
+                    <button class="sort-menu-item">
+                      <mat-icon>mark_as_unread</mat-icon>
+                      <span>Tout marquer comme lu</span>
+                    </button>
+                    <button class="sort-menu-item">
+                      <mat-icon>archive</mat-icon>
+                      <span>Déplacer dans l'archive</span>
+                    </button>
+                    <button class="sort-menu-item">
+                      <mat-icon>delete</mat-icon>
+                      <span>Supprimer</span>
+                    </button>
+                  </div>
+
+
+
                 </div>
-    
+
                 <div class="content">
                     <img class="image" src="assets/cards/MYFORM.PNG" alt="frm">
                 </div>
@@ -71,19 +141,54 @@
                     <h5>VOUS N'AVEZ PAS ENCORE CREER UN FORMULAIRE </h5>
                     <p class="p1">Vos formulaires apparaitront ici</p>
                 </div>
+                <!-- Boîte de dialogue modale -->
+                 <div *ngIf="showDialog" class="modal">
+                  <div class="modal-content">
+                    Créez votre formulaire
+                    <span class="close" (click)="closeDialog()">&times;</span>
+                    <br>
+                    <br>
+
+
+                    <div class="row row-cols-1 row-cols-md-4 g-6">
+                        <div class="col">
+                          <div class="card">
+                            <img src="assets/cardform/C1.PNG" class="card-img-top" alt="C1">
+                            
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card">
+                            <img src="assets/cardform/C2.PNG" class="card-img-top" alt="c2">
+                            
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card">
+                            <img src="assets/cardform/C3.PNG" class="card-img-top" alt="3">
+                            
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card">
+                            <img src="assets/cardform/C4.PNG" class="card-img-top" alt="c4">
+                            
+                          </div>
+                        </div>
+
+
+                  </div>
+                </div>
+                 </div>
+
             </div>
-          </div>
-
+    
+        </div>
     </div>
+</div> 
+          
+
+    
 
 
 
-
-
-
-</div>
-
-
-<!-- <div>
-    <img src="/frontend//public/assets/cards/ARC.PNG" alt="">
-</div> -->

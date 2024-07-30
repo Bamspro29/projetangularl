@@ -14,7 +14,6 @@ import { NavbarComponent } from './dashboard/navbar/navbar.component';
 import { FormcardComponent } from './formcard/formcard.component';
 import { SidebarComponent } from './dashboard/sidebar/sidebar.component';
 import { NewFolderDialogComponent } from './dashboard/new-folder-dialog/new-folder-dialog.component';
-import { MainComponent } from './dashboard/main/main.component';
 
 // Importation des modules Angular Material nécessaires
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -25,6 +24,11 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatTooltipModule } from '@angular/material/tooltip';
+
 import { MesformsComponent } from './pages/mesforms/mesforms.component';
 import { FormarchiveComponent } from './pages/formarchive/formarchive.component';
 import { FormtrashComponent } from './pages/formtrash/formtrash.component';
@@ -42,7 +46,6 @@ import { MysubmissionsComponent } from './pages/mysubmissions/mysubmissions.comp
     FormcardComponent,
     SidebarComponent,
     NewFolderDialogComponent,
-    MainComponent,
     MesformsComponent,
     FormarchiveComponent,
     FormtrashComponent,
@@ -60,7 +63,11 @@ import { MysubmissionsComponent } from './pages/mysubmissions/mysubmissions.comp
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatMenuModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

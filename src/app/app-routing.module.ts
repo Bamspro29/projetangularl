@@ -8,7 +8,6 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { NavbarComponent } from './dashboard/navbar/navbar.component';
 import { FormcardComponent } from './formcard/formcard.component';
 import { NewFolderDialogComponent } from './dashboard/new-folder-dialog/new-folder-dialog.component';
-import { MainComponent } from './dashboard/main/main.component';
 import { SidebarComponent } from './dashboard/sidebar/sidebar.component';
 import { MesformsComponent } from './pages/mesforms/mesforms.component';
 import { FormarchiveComponent } from './pages/formarchive/formarchive.component';
@@ -26,7 +25,6 @@ const routes: Routes = [
   {path:"formcard",component:FormcardComponent},
   {path:"sidebar",component:SidebarComponent},
   {path:"new-folder-dialog", component:NewFolderDialogComponent},
-  {path:"main", component:MainComponent},
 
   // PAGES
   {path:"mesforms",component:MesformsComponent},
