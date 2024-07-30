@@ -1,14 +1,6 @@
 .hhhh{
     width: 100%;
 }
-
-/* .separator {
-    height: 1px;
-    background-color: #e0e0e0;
-    margin: 10px 0;
-} */
-
-
 .horizontal-scroller-container {
     display: flex;
     align-items: center;
@@ -36,4 +28,15 @@
     text-align: center;
     border: 1px solid #ddd;
     border-radius: 4px;
+  }
+
+  .mss{
+    margin-right: 15px;
+  }
+  .yeux{
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  .delete{
+    margin-right: 15px;
   }

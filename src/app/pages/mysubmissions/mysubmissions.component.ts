@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class MysubmissionsComponent {
 
+  searchQuery: string = '';
+
+  onSearch() {
+    console.log('Recherche effectuée pour : ', this.searchQuery);
+    // Ajoutez ici la logique pour effectuer la recherche
+  }
+
+
 }
