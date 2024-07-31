@@ -14,8 +14,8 @@ import { NavbarComponent } from './dashboard/navbar/navbar.component';
 import { FormcardComponent } from './formcard/formcard.component';
 import { SidebarComponent } from './dashboard/sidebar/sidebar.component';
 import { NewFolderDialogComponent } from './dashboard/new-folder-dialog/new-folder-dialog.component';
+import { TeamDialogComponent } from './dashboard/team-dialog/team-dialog.component';
 
-// Importation des modules Angular Material nécessaires
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
@@ -49,7 +49,8 @@ import { MysubmissionsComponent } from './pages/mysubmissions/mysubmissions.comp
     MesformsComponent,
     FormarchiveComponent,
     FormtrashComponent,
-    MysubmissionsComponent
+    MysubmissionsComponent,
+    TeamDialogComponent
   ],
   imports: [
     BrowserModule,

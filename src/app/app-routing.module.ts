@@ -13,6 +13,7 @@ import { MesformsComponent } from './pages/mesforms/mesforms.component';
 import { FormarchiveComponent } from './pages/formarchive/formarchive.component';
 import { FormtrashComponent } from './pages/formtrash/formtrash.component';
 import { MysubmissionsComponent } from './pages/mysubmissions/mysubmissions.component';
+import { TeamDialogComponent } from './dashboard/team-dialog/team-dialog.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' }, // Redirection vers LoginComponent par défaut
@@ -30,7 +31,8 @@ const routes: Routes = [
   {path:"mesforms",component:MesformsComponent},
   {path:"formarchive", component:FormarchiveComponent},
   {path:"formtrash", component:FormtrashComponent},
-  {path:"mysubmissions", component:MysubmissionsComponent}
+  {path:"mysubmissions", component:MysubmissionsComponent},
+  {path:"team-dialog", component:TeamDialogComponent}
   
 
 
