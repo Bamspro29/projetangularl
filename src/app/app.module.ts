@@ -33,6 +33,7 @@ import { MesformsComponent } from './pages/mesforms/mesforms.component';
 import { FormarchiveComponent } from './pages/formarchive/formarchive.component';
 import { FormtrashComponent } from './pages/formtrash/formtrash.component';
 import { MysubmissionsComponent } from './pages/mysubmissions/mysubmissions.component';
+import { TeamDialogComponent } from './dashboard/team-dialog/team-dialog.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { MysubmissionsComponent } from './pages/mysubmissions/mysubmissions.comp
     MesformsComponent,
     FormarchiveComponent,
     FormtrashComponent,
-    MysubmissionsComponent
+    MysubmissionsComponent,
+    TeamDialogComponent
   ],
   imports: [
     BrowserModule,
